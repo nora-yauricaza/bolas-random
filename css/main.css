@@ -1,0 +1,53 @@
+html, body {
+	height: 100%;
+	width: 100%;
+	font-family: verdana;
+}
+body{
+	background: url(../image/camino.jpg) no-repeat;
+	background-size: 100%;
+	background-size: cover;
+}
+.d-flex{
+    display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.circle{
+    width: 200px;
+    height: 200px;
+    background-color: grey;
+    border-radius: 50%;
+    margin: 30px 20px;
+}
+
+.content{
+	background-color: rgba(42,42,42,0.85);
+	padding: 2% 5%;
+	text-align: center;
+	color: white;
+}
+
+.content input{
+    padding: 5px 30px; 
+    margin: 10px 0px;;
+}
+
+.btn{
+    width: 222px;
+    padding: 8px 10px;
+    margin: 5px 0px;
+    color: white;
+    background-color: firebrick;
+    border: none;
+}
+
+.border-red{
+    border: 4px red solid;
+}
+
+
+.hidden {
+    display: none;
+}

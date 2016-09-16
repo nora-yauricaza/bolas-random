@@ -1,46 +1,43 @@
 window.addEventListener("load", function() {
-    var boton = document.getElementById("cri");
-        boton.addEventListener("click", function(){
-            cambiouno();
-    });
+	var boton = document.getElementById("cri");
+	var contador = 1;
+	boton.addEventListener("click", function() {
+		if(contador == 1) {
+			document.getElementById("color").value = "Greenyellow";
+			document.getElementById("bolaUno").classList.add("b-pink");
+			document.getElementById("bolaTres").classList.remove("b-violet");
+		}
+		if(contador == 2) {
+			document.getElementById("color").value = "Darkred";
+			document.getElementById("bolaDos").classList.add("b-gyellow");
+			document.getElementById("bolaUno").classList.remove("b-pink");
+		}
+		if(contador == 3) {
+			document.getElementById("color").value = "Grey";
+			document.getElementById("bolaTres").classList.add("b-violet");
+			document.getElementById("bolaDos").classList.remove("b-gyellow");
+			contador = 0;
+		}
+		contador++;
+	});
     
-    function cambiouno(){
-        
-    }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-
-    
-})
-
-
-
-/*window.addEventListener("load", function() {
-    var boton = document.getElementById("boton");
-        boton.addEventListener("click", function(){
-            var nombre = document.getElementById("nombre").value;
-            var edad = parseInt(document.getElementById("edad").value);
-            var sexo = document.getElementById("sexo").value;
-            var resultado = new Persona(nombre, edad,sexo);
-            document.getElementById("resultado").innerHTML= resultado.presentacion();
-           
-    });
-
-    function Persona(nombre, edad, sexo) {
-        this.nombre = nombre;
-        this.edad = edad
-        this.sexo = sexo;
-        this.mayorDeEdad = (this.edad >= 18);
-        this.presentacion = function(){
-                                return "Hola, mi nombre es " + this. nombre + ", tengo " + this.edad + "años "+ ((this.mayorDeEdad) ? "y soy mayor de edad" : "y soy menor de edad");
-                            };
-    };  
-    
-});*/
+    var botonDos = document.getElementById("superCri");
+    botonDos.addEventListener("click", function() {
+		
+        var color = document.getElementById("color").value;
+        if (color == "Greenyellow" || color == "greenyellow"){
+            document.getElementById("bolaUno").style.border = "4px solid darkred";
+            document.getElementById("bolaDos").style.border = "0px solid darkred";
+            document.getElementById("bolaTres").style.border = "0px solid darkred";
+        } else if (color == "Darkred" || color == "darkred"){
+            document.getElementById("bolaUno").style.border = "0px solid yellow";
+            document.getElementById("bolaDos").style.border = "4px solid yellow";
+            document.getElementById("bolaTres").style.border = "0px solid yellow";
+        } else if (color == "Grey" || color == "grey"){
+            document.getElementById("bolaUno").style.border = "0px solid violet";
+            document.getElementById("bolaDos").style.border = "0px solid violet";
+            document.getElementById("bolaTres").style.border = "4px solid violet";
+        }
+		
+	});
+});

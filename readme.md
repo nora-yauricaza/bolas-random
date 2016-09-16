@@ -7,6 +7,7 @@ En el caso del cri se nos pide hacer una página que al hacer un clic al boton e
 ####SOLUCIÓN 
 
 1. Hacer un script el que incluye eventos, uno de ellos es el click, que nos permitira ejecutar una accion en el botón CRI. la acción que se ejecutara será que aparezca un borde de color en cada uno de los círculos.
+
 ![Imagen conteo](http://4.1m.yt/U4lVSEL.png "Imagen")
 
 2. Para lograr el primer requerimientos solicitado teniamos que crear una secuencia iterativa que permita cambiar el estilo de bordes por cada clic, para eso utilizamos el siguiente formato:
@@ -14,6 +15,7 @@ El nombredocument.getElementById("color").value sirve para poner el valor string
 El document.getElementById("bolaUno").classList.add("") y document.getElementById("bolaTres").classList.remove(""); hacen una secuencia. agrega la clase con el formato del borde y elimina el anterior que trae como colacion, si se nota en la parte final del conteo, este inicia de nuevo en cero que hace que sea ciclico y útil el uso de esta técnica.
 
 Para los tres circulos:
+
 ![Imagen cri](http://3.1m.yt/66fD6u9.png "Imagen")
 
 
